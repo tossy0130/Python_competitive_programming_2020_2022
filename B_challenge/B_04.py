@@ -264,6 +264,8 @@ B_challenge_09(arr_09)
 # ================================== Start
 
 """
+=========== ANS ============
+
 文字列 s が入力されるので、n 文字目と n + 1 文字目を出力してください。 n + 1 文字目がない場合は何も出力しない
 
 入力例1
@@ -274,14 +276,68 @@ read
 e a
 
 """
+n = int(input()) - 1
+string = input()
+
+if n + 1 < len(string):
+    print(string[n] + " " + string[n + 1])
 
 # ================================== End
 
 # ================================== Start
 
 """
+1行目で文字列 s、2行目で文字列 t が入力されます。
+s が t の中で何回出現するかカウントして出力
+
+入力例1
+AA
+abdeeAAbAAAbfde
+
+出力例1
+3
+
+入力例2
+el
+scale
+
+出力例2
+0
 
 """
+
+
+# ===================== ANS
+
+pattern = input()
+string = input()
+result = 0
+
+for i in range(len(string) - len(pattern) + 1):
+    portion = string[i: i + len(pattern)]
+
+    if portion == pattern:
+        result += 1
+
+print(result)
+
+
+# ===================== ANS END
+
+
+t_list_11 = input()
+s_lsit_11 = input()
+
+ans = 0
+
+for i in range(len(s_lsit_11) - len(t_list_11) + 1):
+    pos = s_lsit_11[i: i + len(t_list_11)]
+
+    if t_list_11 == pos:
+        ans += 1
+
+print(ans)
+
 
 # ================================== End
 
