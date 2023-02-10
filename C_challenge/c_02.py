@@ -212,7 +212,58 @@ PAIIIZA 3
 2
 0
 
+＝＝＝　模範　＝＝＝
+
+n = int(input())
+dmg = {}
+
+for i in range(n):
+    s = input()
+    dmg[s] = 0
+
+m = int(input())
+
+for i in range(m):
+    [p, a] = input().split()
+    a = int(a)
+    dmg[p] += a
+
+names = list(dmg.keys())
+names.sort()
+
+for name in names:
+    print(dmg[name])
+
 """
+
+# int 取得
+num_03_i = int(input())
+
+# 辞書 初期化
+dmg_03 = {}
+
+# {'MIDORIKAWA': 0, 'KIRISHIMA': 0}  という辞書を作成する
+for i in range(num_03_i):
+    str_03 = input()
+    dmg_03[str_03] = 0
+
+# int 取得
+num_03_02 = int(input())
+
+for i in range(num_03_02):
+    [a, b] = input().split()
+    b = int(b)
+    dmg_03[a] += b
+
+# key をソートする
+# アルファベット順にソート　a b c の昇順
+arr_03 = list(dmg_03.keys())
+arr_03.sort()
+
+
+# === 出力 リストを使って、辞書を出力
+for val in arr_03:
+    print(dmg_03[val])
 
 
 # ================================== End
